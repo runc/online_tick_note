@@ -1,0 +1,4 @@
+# online_tick_note · Cloudflare Pages
+name = "online-tick-note"
+compatibility_date = "2025-06-01"
+pages_build_output_dir = "dist"
