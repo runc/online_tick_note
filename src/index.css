@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+  --color-background: #f8f9fb;
+  --color-foreground: #18181f;
+  --color-card: #ffffff;
+  --color-card-foreground: #18181f;
+  --color-primary: #16a34a;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: #18181f;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #71717a;
+  --color-accent: #f4f4f5;
+  --color-accent-foreground: #18181f;
+  --color-destructive: #dc2626;
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: #16a34a;
+  --color-chart-bg: #ffffff;
+  --color-chart-text: #71717a;
+  --color-chart-grid: #e4e4e7;
+  --color-editor-bg: #ffffff;
+  --color-editor-gutter: #f4f4f5;
+  --color-editor-active: #f0fdf4;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+}
+
+.dark {
+  --color-background: #0f0f14;
+  --color-foreground: #e4e4e7;
+  --color-card: #18181f;
+  --color-card-foreground: #e4e4e7;
+  --color-primary: #22c55e;
+  --color-primary-foreground: #052e16;
+  --color-secondary: #27272a;
+  --color-secondary-foreground: #e4e4e7;
+  --color-muted: #27272a;
+  --color-muted-foreground: #a1a1aa;
+  --color-accent: #27272a;
+  --color-accent-foreground: #e4e4e7;
+  --color-destructive: #ef4444;
+  --color-border: #2e2e38;
+  --color-input: #2e2e38;
+  --color-ring: #22c55e;
+  --color-chart-bg: #18181f;
+  --color-chart-text: #a1a1aa;
+  --color-chart-grid: #2e2e38;
+  --color-editor-bg: #0f0f14;
+  --color-editor-gutter: #18181f;
+  --color-editor-active: #1a1a24;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
