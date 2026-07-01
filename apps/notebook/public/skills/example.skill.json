@@ -1,0 +1,11 @@
+{
+  "id": "dividend-focus",
+  "name": "高股息筛选",
+  "description": "关注分红与估值的安全边际",
+  "instructions": "Focus on dividend yield and valuation safety:\n1. get_finance for each symbol\n2. Highlight dividend-related metrics and PE/PB\n3. Summarize whether valuation looks reasonable for income investors.",
+  "activeTools": ["get_finance", "get_quote", "compare_symbols", "render_table"],
+  "starterPrompts": [
+    "看看 SH600519 的分红和估值",
+    "对比 SH601318 和 SH600036 的基本面"
+  ]
+}
