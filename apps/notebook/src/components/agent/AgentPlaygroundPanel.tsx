@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react'
 import { PanelRightClose, PanelRightOpen, Presentation } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ArtifactPanel } from '@/components/agent/ChatMessage'
@@ -12,6 +11,7 @@ interface AgentPlaygroundPanelProps {
   collapsed: boolean
   onToggleCollapsed: () => void
   panelStyle?: React.CSSProperties
+  isResizing?: boolean
 }
 
 export function AgentPlaygroundPanel({
@@ -20,6 +20,7 @@ export function AgentPlaygroundPanel({
   collapsed,
   onToggleCollapsed,
   panelStyle,
+  isResizing = false,
 }: AgentPlaygroundPanelProps) {
   const { t } = useTranslation()
 
@@ -27,7 +28,8 @@ export function AgentPlaygroundPanel({
     <aside
       style={collapsed ? undefined : panelStyle}
       className={cn(
-        'hidden shrink-0 flex-col overflow-hidden border-l border-border bg-card transition-[width] duration-200 ease-in-out lg:flex',
+        'hidden shrink-0 flex-col overflow-hidden border-l border-border bg-card lg:flex',
+        !isResizing && 'transition-[width] duration-200 ease-in-out',
         collapsed ? 'w-10' : 'min-w-[280px]',
       )}
     >

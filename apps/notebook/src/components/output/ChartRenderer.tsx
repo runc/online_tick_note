@@ -22,11 +22,6 @@ export interface ChartRendererProps {
   className?: string
 }
 
-function resolveChartHeight(fixedHeight: number | undefined, containerHeight: number): number {
-  if (fixedHeight != null) return fixedHeight
-  return containerHeight > 0 ? containerHeight : 400
-}
-
 export function ChartRenderer({
   output,
   bars,
